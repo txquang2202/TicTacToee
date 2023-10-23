@@ -1,43 +1,22 @@
 * {
   box-sizing: border-box;
-}
-
-body {
-  font-family: sans-serif;
-  margin: 20px;
+  margin: 0;
   padding: 0;
 }
-
-h1 {
-  margin-top: 0;
-  font-size: 22px;
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f4f4f4;
 }
-
-h2 {
-  margin-top: 0;
-  font-size: 20px;
-}
-
-h3 {
-  margin-top: 0;
-  font-size: 18px;
-}
-
-h4 {
-  margin-top: 0;
-  font-size: 16px;
-}
-
-h5 {
-  margin-top: 0;
-  font-size: 14px;
-}
-
+h1,
+h2,
+h3,
+h4,
+h5,
 h6 {
   margin-top: 0;
-  font-size: 12px;
+  font-size: 1.5rem;
 }
-
 code {
   font-size: 1.2em;
 }
@@ -67,8 +46,26 @@ body {
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   width: 34px;
+}
+.square.X {
+  color: #f00;
+}
+
+.square.O {
+  color: #00f;
+}
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.square:hover {
+  background-color: #eee;
+  transform: scale(1.05);
 }
 
 .board-row:after {
@@ -78,6 +75,7 @@ body {
 }
 
 .status {
+  font-size: 1.2rem;
   margin-bottom: 10px;
 }
 .game {
@@ -87,7 +85,56 @@ body {
 
 .game-info {
   margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .winning-line {
   background-color: rgb(234, 121, 121);
+}
+/* Toggle Switch Style */
+.react-switch-bg {
+  background-color: #999;
+}
+
+.react-switch-handle {
+  background-color: #fff;
+  border: 1px solid #999;
+}
+
+/* Moves List Style */
+ol {
+  list-style: none;
+}
+
+li {
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+li button:hover {
+  background-color: #0056b3;
+}
+
+/* Highlight Current Move */
+li p {
+  font-weight: bold;
+}
+
+/* Draw Game Message Style */
+.draw-message {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #777;
 }
