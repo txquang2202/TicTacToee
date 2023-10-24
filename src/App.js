@@ -132,22 +132,27 @@ export default function Game() {
   }
   return (
     <>
-      <div className="game">
-        <div className="game-board">
-          <Board
-            xIsNext={xIsNext}
-            squares={currentSquares}
-            onPlay={handlePlay}
-          />
-        </div>
-        <div className="game-info">
-          <div className="app" style={{ textAlign: "center" }}>
-            <h4>Sort Toggle</h4>
-            <ReactSwitch checked={checked} onChange={SortChanging} />
+      <div className="container">
+        <div className="game">
+          <div className="game-board">
+            <Board
+              xIsNext={xIsNext}
+              squares={currentSquares}
+              onPlay={handlePlay}
+            />
           </div>
-          <ol>{checked ? moves : moves.reverse()}</ol>
+          <div className="game-info">
+            <div className="app" style={{ textAlign: "center" }}>
+              <h4>Sort Toggle</h4>
+              <ReactSwitch checked={checked} onChange={SortChanging} />
+            </div>
+            <ol>{checked ? moves : moves.reverse()}</ol>
+          </div>
         </div>
       </div>
+      <footer className="footer">
+        <p>QuangTX©️</p>
+      </footer>
     </>
   );
 }

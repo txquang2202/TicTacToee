@@ -92,7 +92,7 @@ body {
 .winning-line {
   background-color: rgb(234, 121, 121);
 }
-/* Toggle Switch Style */
+/* Toggle Switch*/
 .react-switch-bg {
   background-color: #999;
 }
@@ -102,7 +102,6 @@ body {
   border: 1px solid #999;
 }
 
-/* Moves List Style */
 ol {
   list-style: none;
 }
@@ -127,14 +126,24 @@ li button:hover {
   background-color: #0056b3;
 }
 
-/* Highlight Current Move */
 li p {
   font-weight: bold;
 }
 
-/* Draw Game Message Style */
 .draw-message {
   font-size: 1.2rem;
   font-weight: bold;
   color: #777;
 }
+/* Footer */
+.footer {
+  margin-top: 65vh;
+  text-align: center;
+  font-size: 1.4rem;
+}
+/* .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+} */
